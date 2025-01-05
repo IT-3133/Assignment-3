@@ -1,7 +1,33 @@
 import { Image, ScrollView, StyleSheet, View } from "react-native";
-import { Divider, PaperProvider, Text } from "react-native-paper";
+import {
+  Button,
+  Divider,
+  PaperProvider,
+  Text,
+  TextInput,
+} from "react-native-paper";
+import { students } from "../data/StudentsDb";
+import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Login() {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigation();
+
+  const handlebutton = () => {
+    // Checking for multiple students
+    const student = students.find(
+      (student) => student.username === name && student.password === password
+    );
+
+    if (student) {
+      navigate.navigate("profile");
+    } else {
+      alert("Invalid username or password.");
+    }
+  };
+
   return (
     <PaperProvider>
       <ScrollView>
@@ -15,8 +41,23 @@ export default function Login() {
           />
         </View>
         <View style={styles.container}>
-          <Text style={styles.loginText}> Student Login</Text>
+          <Text style={styles.loginText}>Student Login</Text>
           <Divider />
+        </View>
+
+        <View style={styles.formcontainer}>
+          <TextInput label="Username" mode="outlined" onChangeText={setName} />
+          <TextInput
+            label="Password"
+            mode="outlined"
+            secureTextEntry
+            onChangeText={setPassword}
+          />
+          <View style={styles.buttoncontainer}>
+            <Button mode="contained" onPress={handlebutton}>
+              Login
+            </Button>
+          </View>
         </View>
       </ScrollView>
     </PaperProvider>
@@ -48,5 +89,12 @@ const styles = StyleSheet.create({
   loginText: {
     fontSize: 40,
     fontWeight: "bold",
+  },
+  formcontainer: {
+    paddingHorizontal: 20,
+    marginTop: 20,
+  },
+  buttoncontainer: {
+    paddingTop: 20,
   },
 });

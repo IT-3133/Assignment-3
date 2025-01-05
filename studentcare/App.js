@@ -4,6 +4,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "./components/Login";
+import Profile from "./components/Profile";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -15,6 +16,7 @@ export default function App() {
           screenOptions={{ headerStyle: { backgroundColor: "#e2bee2" } }}
         >
           <Stack.Screen name="login" component={Login}></Stack.Screen>
+          <Stack.Screen name="profile" component={Profile}></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

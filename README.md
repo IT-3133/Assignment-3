@@ -1,7 +1,10 @@
-<h1>2020ICT30</h1>
+<h1>2020/ICT/30</h1>
 <h1>Assignment 3</h1>
 
 <h3>In this assignment we have to create student care mobile app using react native</h3>
+
+<p>Create Project:- npx create-expo-app studentcare --template</p>
+<p>Run Project:-npm start</p>
 
 <table>
   <tr>

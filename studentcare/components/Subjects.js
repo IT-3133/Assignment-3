@@ -47,7 +47,16 @@ export default function Subjects() {
     <PaperProvider>
       <ScrollView style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.headerText}>Computer Science</Text>
+          <Text style={styles.headerText}>UoV Student Care</Text>
+        </View>
+        <View style={styles.imagecontain}>
+          <Image
+            source={require("../assets/uovlogo.png")}
+            style={styles.image}
+          />
+        </View>
+        <View style={styles.headerSubject}>
+          <Text style={styles.headerTextsubject}>Computer Science</Text>
         </View>
 
         <View style={styles.inputContainer}>
@@ -111,14 +120,13 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
   },
-  header: {
+  headerSubject: {
     alignItems: "center",
     marginBottom: 20,
   },
-  headerText: {
+  headerTextsubject: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "#8b008b",
   },
   inputContainer: {
     marginBottom: 20,
@@ -146,6 +154,30 @@ const styles = StyleSheet.create({
   },
   averageText: {
     fontSize: 18,
+    fontWeight: "bold",
+  },
+  header: {
+    width: "100%",
+    height: 100,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#8b008b",
+  },
+  headerText: {
+    fontSize: 24,
+    color: "#fff",
+    backgroundColor: "#8b008b",
+    fontWeight: "bold",
+  },
+  image: {
+    width: "60%",
+    height: 100,
+    resizeMode: "contain",
+    marginTop: 5,
+  },
+  imagecontain: { alignItems: "center" },
+  loginText: {
+    fontSize: 40,
     fontWeight: "bold",
   },
 });

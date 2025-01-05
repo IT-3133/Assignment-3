@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Course from "./components/Course";
+import Subjects from "./components/Subjects";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -19,6 +20,7 @@ export default function App() {
           <Stack.Screen name="login" component={Login}></Stack.Screen>
           <Stack.Screen name="profile" component={Profile}></Stack.Screen>
           <Stack.Screen name="course" component={Course}></Stack.Screen>
+          <Stack.Screen name="subjects" component={Subjects}></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

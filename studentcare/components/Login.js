@@ -22,7 +22,7 @@ export default function Login() {
     );
 
     if (student) {
-      navigate.navigate("profile");
+      navigate.navigate("profile", { studentdata: student });
     } else {
       alert("Invalid username or password.");
     }

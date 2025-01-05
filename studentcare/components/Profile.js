@@ -59,7 +59,7 @@ export default function Profile({ route }) {
           <Button
             mode="contained"
             onPress={() => {
-              /* handle press */
+              navigate.navigate("profile", { studentdata });
             }}
             style={styles.button}
           >
@@ -68,7 +68,7 @@ export default function Profile({ route }) {
           <Button
             mode="contained"
             onPress={() => {
-              /* handle press */
+              navigate.navigate("course");
             }}
             style={styles.button}
           >
@@ -77,7 +77,7 @@ export default function Profile({ route }) {
           <Button
             mode="contained"
             onPress={() => {
-              /* handle press */
+              navigate.navigate("subjects");
             }}
             style={styles.button}
           >

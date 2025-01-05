@@ -18,8 +18,14 @@ export default function Profile({ route }) {
           />
         </View>
 
-        <View>
-          <Text>Name:{studentdata.username}</Text>
+        <View style={styles.studentInfoContainer}>
+          <Image
+            style={styles.profilePicContainer}
+            source={studentdata.profile_pic}
+          ></Image>
+          <Text style={styles.studentName}>Name:{studentdata.username}</Text>
+          <Text style={styles.studentDetails}>Age:{studentdata.age}</Text>
+          <Text style={styles.studentDetails}>Gender:{studentdata.gender}</Text>
         </View>
       </ScrollView>
     </PaperProvider>
@@ -50,5 +56,31 @@ const styles = StyleSheet.create({
   loginText: {
     fontSize: 40,
     fontWeight: "bold",
+  },
+  studentInfoContainer: {
+    width: "100%",
+    alignItems: "center",
+    paddingHorizontal: 10,
+  },
+  profilePicContainer: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    overflow: "hidden",
+    marginBottom: 20,
+    borderWidth: 3,
+    borderColor: "#8b008b", // Matching border color
+  },
+  studentDetails: {
+    fontSize: 18,
+    color: "#555",
+    marginBottom: 5,
+    textAlign: "center",
+  },
+  studentName: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#333",
+    marginBottom: 10,
   },
 });

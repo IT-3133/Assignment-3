@@ -9,25 +9,12 @@ export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <SafeAreaProvider>
-      <View style={styles.header}>
-        <Text style={styles.headerText}>UoV Student Care</Text>
-      </View>
-      <View>
-        <Image
-          source={require("./assets/uovlogo.png")}
-          styles={styles.image}
-        ></Image>
-      </View>
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="login"
-          screenOptions={{ headerStyle: { backgroundColor: "e2bee2" } }}
+          screenOptions={{ headerStyle: { backgroundColor: "#e2bee2" } }}
         >
-          <Stack.Screen
-            name="login"
-            component={Login}
-            //options={{ title: "UoV Student Care" }}
-          ></Stack.Screen>
+          <Stack.Screen name="login" component={Login}></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
@@ -40,22 +27,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-  },
-  header: {
-    width: "100%",
-    height: 100,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#8b008b",
-  },
-  headerText: {
-    fontSize: 24,
-    color: "#fff",
-    backgroundColor: "#8b008b",
-    fontWeight: "bold",
-  },
-  image: {
-    width: "85%",
-    height: 80,
+    padding: 10,
   },
 });

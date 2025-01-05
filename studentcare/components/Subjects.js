@@ -111,6 +111,10 @@ export default function Subjects() {
             <Text style={styles.averageText}>Average Marks: {average}</Text>
           </View>
         )}
+
+        <View style={styles.header}>
+          <Text style={styles.headerText}>UoV @ 2025</Text>
+        </View>
       </ScrollView>
     </PaperProvider>
   );

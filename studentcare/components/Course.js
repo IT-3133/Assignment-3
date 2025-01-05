@@ -4,11 +4,10 @@ import { PaperProvider, Text, Divider } from "react-native-paper";
 export default function Course() {
   const sampleCourseData = {
     courseName: "Introduction to React Native",
-    courseCode: "RN101",
-    department: "Computer Science",
-    duration: "3 Months",
-    description:
-      "This course covers the fundamentals of React Native, including components, state management, and navigation to build cross-platform mobile applications.",
+    courseCode: "CS101",
+    department: "Engineering",
+    duration: "4 Years",
+    description: "Focus on Programming Algorithm and System Design",
   };
 
   return (
@@ -57,6 +56,9 @@ export default function Course() {
           </Text>
 
           <Divider style={styles.divider} />
+        </View>
+        <View style={styles.header}>
+          <Text style={styles.headerText}>UoV @2025</Text>
         </View>
       </ScrollView>
     </PaperProvider>
